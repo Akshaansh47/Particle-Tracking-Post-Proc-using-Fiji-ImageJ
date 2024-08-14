@@ -30,7 +30,8 @@ def ptrack():
     elif option == 4:
         option2 = input("\n 1. Net displacement over time"
                         "\n 2. X-location over time"
-                        "\n 3. Y-Location over time\n")
+                        "\n 3. Y-Location over time"
+                        "\n 4. Trajectories of all particles over time\n")
         option2 = int(option2)
         cplots(option2,xloc,yloc,nspots,frames)
     else:
@@ -65,6 +66,14 @@ def cplots(o,x,y,n,f):
         plt.xlabel("Time (frames")
         plt.ylabel("Y-Location (pixels)")
         plt.title("Y-Location vs. Time")
+        plt.show()
+    elif o == 4:
+        for i in range(0, n):
+            plt.plot(x[:, i], y[:, i])
+            plt.plot(x[0, i], y[0, i], marker="+", markersize=5)
+        plt.title("Particle trajectories over time")
+        plt.xlabel("Pixels")
+        plt.ylabel("Pixels")
         plt.show()
     else:
         print("Invalid input")
@@ -141,7 +150,6 @@ plt.show()
 
 running = True
 while running:
-    print(running)
     ptrack()
     q = input("\n Would you like to view something else?(Y/N)\n")
     if q == "Y" or q == "y" or q == "Yes" or q == "yes":
