@@ -9,6 +9,7 @@ This code enables the easy extraction and analysis of data from Particle Trackin
 Particle tracking is a process that helps us understand the effects of a force or displacement at a specific point on a sample. The main application is in large lattice structures, wherein a number of vertices are in motion at the same time and capturing each one is of the essence. The results will show us trajectories, displacements and scatter plots of the various states within the experiment, whether across frames or across particles.
 
 **Requirements**
+
 Ensure that your data is available in .csv format and that you have ordered all your data by frame (using the Filter Sort tool on Google Sheets or Microsoft Excel). The desired order is of every particle in ascending order within each frame and every frame in ascending order overall.
 
 **Functionality**
